@@ -1,0 +1,3 @@
+# AdMob authorized seller declaration for narekv-games apps.
+# TODO: replace the line below with the real AdMob publisher id (pub-...).
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>narekv games</title>
+  <meta name="description" content="Party games for one phone and a room full of friends: Alias and Find the Spy.">
+  <style>
+    :root {
+      --paper: #12161D;
+      --card: #1B2029;
+      --border: #2C3543;
+      --text: #F6F2E9;
+      --muted: #9BA3AF;
+      --tint: #FFC53D;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--paper);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main { width: 100%; max-width: 720px; margin: 0 auto; padding: 48px 24px; flex: 1; }
+    .eyebrow { color: var(--tint); text-transform: uppercase; letter-spacing: 0.12em; font-size: 13px; font-weight: 700; }
+    h1 { font-size: 40px; letter-spacing: -1px; margin: 8px 0 4px; }
+    .tagline { color: var(--muted); margin-bottom: 40px; }
+    .game {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .game h2 { font-size: 24px; margin-bottom: 6px; }
+    .game p { color: var(--muted); margin-bottom: 16px; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .button {
+      display: inline-block;
+      background: var(--tint);
+      color: #12161D;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+    }
+    .button.soon { background: transparent; color: var(--muted); border: 2px solid var(--border); cursor: default; }
+    a.quiet { color: var(--tint); text-decoration: none; }
+    a.quiet:hover { text-decoration: underline; }
+    footer { border-top: 2px solid var(--border); }
+    footer div { max-width: 720px; margin: 0 auto; padding: 20px 24px; color: var(--muted); font-size: 14px; }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">narekv games</p>
+    <h1>Party games for one phone</h1>
+    <p class="tagline">Pass the phone around and let the room do the talking. Made by Narek Vardapetyan.</p>
+
+    <section class="game">
+      <h2>🟨 Alias</h2>
+      <p>Explain words, guess fast, win together. Teams, timed rounds, word decks in Armenian, Russian and English — fully offline.</p>
+      <div class="links">
+        <span class="button soon">Coming soon to Google Play</span>
+        <a class="quiet" href="/privacy/alias.html">Privacy policy</a>
+      </div>
+    </section>
+
+    <section class="game">
+      <h2>🕵️ Find the Spy</h2>
+      <p>Everyone knows the secret word — except the spy. Ask questions, watch reactions, vote. One phone, endless bluffing.</p>
+      <div class="links">
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.armdevstack.findthespy">Google Play</a>
+        <a class="quiet" href="/privacy-policy/">Privacy policy</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>© 2026 Narek Vardapetyan · <a href="mailto:armdevstack@gmail.com">armdevstack@gmail.com</a></div>
+  </footer>
+</body>
+</html>
