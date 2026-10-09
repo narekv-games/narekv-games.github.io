@@ -349,9 +349,9 @@
             </thead>
             <tbody>
               <tr>
-                <td>Team names, emoji and colors, scores, settings, custom topics and words, presets, the word history, results of finished games, an unfinished game</td>
+                <td>Team names, emoji and colors, scores, settings, custom topics and words, presets, the word history, results of finished games, an unfinished game; premium state, the consent choice, advertising timings and counters</td>
                 <td>Stays on the device</td>
-                <td>Provide game features, restore settings, resume play</td>
+                <td>Provide game features, restore settings, resume play, pace ads and offers</td>
                 <td>None — local storage only</td>
               </tr>
               <tr>
@@ -361,7 +361,7 @@
                 <td>Google AdMob, subject to your consent choice</td>
               </tr>
               <tr>
-                <td>Screen names, the setup and length of a game, purchase steps, offers and ads shown; a random installation identifier, device model and language, operating system and app version, the country derived from the IP address, session time</td>
+                <td>Screen names, the setup, length and outcome of a game, purchase steps, offers and ads shown, the fact that a result or an invitation was shared; a random installation identifier, device model and language, operating system and app version, the country derived from the IP address, session time</td>
                 <td>Sent while usage statistics are switched on, and only after consent where the law requires it</td>
                 <td>Understand how the game is used and improve it</td>
                 <td>Google Analytics for Firebase</td>
@@ -402,7 +402,8 @@
           <li>an unfinished game and its current state, so play can resume after the app is closed;</li>
           <li>the state of premium access: the plan that was bought, or the moment a gifted unlock ends;</li>
           <li>whether usage statistics are switched on, and the most recent response to the consent form;</li>
-          <li>advertising timings: when an ad was last shown, when the rewarded gift was last offered or taken, how many extensions of a gift were used;</li>
+          <li>advertising timings: when the app was first opened, when an ad was last shown, when the rewarded gift or an offer of premium was last shown or taken, how many times the gift was offered and how many extensions of a gift were used;</li>
+          <li>the identifier of the installed app update, so that the notice about it is shown once;</li>
           <li>a count of finished games and whether a store review has already been requested.</li>
         </ul>
         <p>This local game data is used only to provide game features, restore settings and resume play. It is not sent to a server operated by the developer. Users should avoid entering sensitive personal information in team names, custom topics or custom words.</p>
@@ -423,9 +424,10 @@
         <p>An event may carry:</p>
         <ul class="list">
           <li>the name of a screen that was opened;</li>
-          <li>the start and the end of a game: the mode, the word language, the number of teams and of topics, which of the built-in topics were chosen, the length of a round, the target score, the number of rounds and the length of the game in minutes;</li>
-          <li>purchase steps: opening the premium screen, choosing a plan, and the result of a purchase or purchase restoration;</li>
-          <li>an offer of temporary premium that was shown or accepted, and an advertisement that was shown.</li>
+          <li>the start and the end of a game: the mode, the word language, the number of teams, of built-in topics and of the user's own topics, which of the built-in topics were chosen, the length of a round, the target score, the size of a word card, whether the last-word rule is on, whether the game is a rematch, the number of rounds, the length of the game in minutes and whether it ended with a winner or a draw;</li>
+          <li>purchase steps: opening the premium screen and the screen it was opened from, choosing a plan, and the result of a purchase or purchase restoration;</li>
+          <li>an offer of temporary premium that was shown or accepted, and an advertisement that was shown;</li>
+          <li>the fact that the result of a game or an invitation was shared, without its content or its recipient.</li>
         </ul>
         <p>The Firebase SDK adds technical data of its own: a random identifier of the installation, the device model and language, the version of the operating system and of the app, the country derived from the IP address, and the time and length of a session. The IP address is used to derive the country and is not kept in the reports.</p>
         <p>Team names, scores, played words, and topics and words made by the user are never part of an event. The statistics are not used for advertising: the analytics SDK is set not to collect the advertising ID, and its data is not shared for the personalization of ads.</p>
@@ -461,7 +463,7 @@
         <h2 class="section-title">9. Sharing started by the user</h2>
         <p>Four actions hand data to another application, and only after the user starts them:</p>
         <ul class="list">
-          <li><strong>Export a topic</strong> passes the topic's name and words to the app chosen in the system share sheet;</li>
+          <li><strong>Share a topic</strong> passes the topic's name and words to the app chosen in the system share sheet;</li>
           <li><strong>Share a game setup</strong> passes the preset — team names, colors and rules — the same way;</li>
           <li><strong>Share the result</strong> passes an image of the game results showing team names and scores;</li>
           <li><strong>Invite friends</strong> passes a short fixed invitation text and a link to the app's store page.</li>
@@ -489,7 +491,7 @@
 
       <section id="retention">
         <h2 class="section-title">13. Retention and deletion</h2>
-        <p>Local game data remains on the device until the user clears it in Settings or uninstalls the app. The word history and the statistics have their own reset buttons, and the "Start over" section in Settings deletes all game data at once — the unfinished game, custom topics and words, presets, history, statistics and the settings themselves — without touching purchases. What survives a reset — premium state, advertising timings, the review counter, the most recent response to the consent form and the choice about usage statistics — is removed by uninstalling the app.</p>
+        <p>Local game data remains on the device until the user clears it in Settings or uninstalls the app. The word history and the statistics have their own reset buttons, and the "Start over" section in Settings deletes all game data at once — the unfinished game, custom topics and words, presets, history, statistics and the settings themselves — without touching purchases. What survives a reset — premium state, advertising timings, the review counter, the identifier of the installed update, the most recent response to the consent form and the choice about usage statistics — is removed by uninstalling the app.</p>
         <p>Usage statistics are tied to a random identifier of the installation, not to a name or an account, so the developer cannot tell which events belong to which person. Switching the statistics off stops the collection, uninstalling the app removes the identifier from the device, and Google deletes the events at the end of the retention period.</p>
         <p>Purchase records may be retained by the stores and by RevenueCat according to their legal obligations and retention policies. A user may write to armdevstack@gmail.com to request deletion of information controlled through RevenueCat; the developer may need an anonymous RevenueCat App User ID or purchase information sufficient to locate the record. Store transaction records that Apple or Google must retain may not be controlled by the developer.</p>
       </section>
