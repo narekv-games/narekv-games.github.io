@@ -35,21 +35,21 @@
 <h2>Data stored on the device</h2>
 <p>The app may store the following data locally:</p>
 <ul>
-<li>team names, emoji and colours entered by users, and their scores;</li>
+<li>team names, emoji and colors entered by users, and their scores;</li>
 <li>interface and word language, sound, vibration, accent theme, timer and scoring settings;</li>
 <li>topics and words the user creates, and saved game setups (presets);</li>
 <li>the history of words already played, so they are not repeated;</li>
 <li>results of finished games: teams, scores, dates, per-round statistics;</li>
-<li>an unfinished game and its current state, so a closed app does not lose the party;</li>
+<li>an unfinished game and its current state, so play can resume after the app is closed;</li>
 <li>the state of premium access: the plan that was bought, or the moment a gifted unlock ends;</li>
-<li>whether usage statistics are switched on, and the last answer of the consent form;</li>
+<li>whether usage statistics are switched on, and the most recent response to the consent form;</li>
 <li>advertising timings: when an ad was last shown, when the rewarded gift was last offered or taken, how many extensions of a gift were used;</li>
 <li>a count of finished games and whether a store review has already been requested.</li>
 </ul>
 <p>This local game data is used only to provide game features, restore settings and resume play. It is not sent to a server operated by the developer. Users should avoid entering sensitive personal information in team names, custom topics or custom words.</p>
 <p>The word history and the game statistics can be cleared from the app's Settings. Uninstalling the app removes all app-controlled local data, subject to the device platform's backup and restoration behaviour.</p>
 <h2>Advertising and Google AdMob</h2>
-<p>The free version may request an interstitial advertisement from Google AdMob after a round has been confirmed, and never during a round. Consecutive interstitials are separated by a minimum interval. Interstitial ads are not requested while premium access is active, whether it was bought or temporarily unlocked. If an ad cannot be loaded, the game continues after the load attempt.</p>
+<p>The free version may show an interstitial advertisement from Google AdMob after a round has been confirmed, and never during a round. The advertisement may be loaded in advance, while the results of the round are on screen. Consecutive interstitials are separated by a minimum interval. Interstitial ads are not requested while premium access is active, whether it was bought or temporarily unlocked. If an ad cannot be loaded, the game continues after the load attempt.</p>
 <p>In addition to the interstitial, the app rarely offers an optional rewarded video on the winner screen. It is never shown automatically: it starts only when the user chooses to watch it, and watching it to the end unlocks all premium features for thirty minutes, including the removal of interstitials for that time. Near the end of a gifted unlock the app may offer one more video to extend it, at most twice.</p>
 <p>When advertising is enabled, the Google Mobile Ads SDK may automatically collect and share an IP address, which may be used to estimate approximate location; user interactions with the app or an ad; diagnostic and performance information; and advertising, app-set, device or account-related identifiers. Google uses this information for advertising, ad measurement and analytics, and fraud prevention. Data is encrypted in transit. Depending on the user's region, device settings and consent choices, ads may be personalized or non-personalized; where consent is required, the choice is collected before advertising is initialized, and the app provides a way to review or change it.</p>
 <p>The app does not add team names, scores, played words or custom topics to an advertising request. Android users can reset or delete their advertising ID in device settings. Google's advertising privacy information and controls are available at <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a> and <a href="https://myadcenter.google.com/">myadcenter.google.com</a>.</p>
@@ -59,12 +59,12 @@
 <ul>
 <li>the name of a screen that was opened;</li>
 <li>the start and the end of a game: the mode, the word language, the number of teams and of topics, which of the built-in topics were chosen, the length of a round, the target score, the number of rounds and the length of the game in minutes;</li>
-<li>the steps of a purchase: the premium screen was opened, a plan was chosen, the result of a purchase or of a restore;</li>
+<li>purchase steps: opening the premium screen, choosing a plan, and the result of a purchase or purchase restoration;</li>
 <li>an offer of temporary premium that was shown or accepted, and an advertisement that was shown.</li>
 </ul>
 <p>The Firebase SDK adds technical data of its own: a random identifier of the installation, the device model and language, the version of the operating system and of the app, the country derived from the IP address, and the time and length of a session. The IP address is used to derive the country and is not kept in the reports.</p>
 <p>Team names, scores, played words, and topics and words made by the user are never part of an event. The statistics are not used for advertising: the analytics SDK is set not to collect the advertising ID, and its data is not shared for the personalization of ads.</p>
-<p>Where the law requires consent, the statistics are collected only after the user gave it in the same consent form that serves the advertising. Everywhere the statistics can be switched off in the app under Settings, About, Usage statistics, and nothing is collected after that.</p>
+<p>Where the law requires consent, statistics are collected only after the user gives consent through the same form used for advertising preferences. In all regions, statistics can be switched off in the app under Settings, About, Usage statistics. This stops further collection of usage statistics.</p>
 <p>Google keeps the events for up to fourteen months. Firebase privacy information is available at <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 <h2>Purchases and RevenueCat</h2>
 <p>For in-app purchases:</p>
@@ -85,11 +85,11 @@
 <p>Four actions hand data to another application, and only after the user starts them:</p>
 <ul>
 <li><strong>Export a topic</strong> passes the topic's name and words to the app chosen in the system share sheet;</li>
-<li><strong>Share a game setup</strong> passes the preset — team names, colours and rules — the same way;</li>
-<li><strong>Share the result</strong> passes a picture of a finished game: the names of the teams and their scores;</li>
+<li><strong>Share a game setup</strong> passes the preset — team names, colors and rules — the same way;</li>
+<li><strong>Share the result</strong> passes an image of the game results showing team names and scores;</li>
 <li><strong>Invite friends</strong> passes a short fixed invitation text and a link to the app's store page.</li>
 </ul>
-<p>The user selects the recipient and the application that receives the message, and that application processes it under its own terms. Played words and statistics are never included, and the scores only in the picture of the result.</p>
+<p>The user selects the recipient and the application that receives the message, and that application processes it under its own terms. Played words and statistics are never included. Scores are shared only in the results image.</p>
 <h2>Sharing and sale of data</h2>
 <p>The developer does not sell personal data.</p>
 <p>Technical, advertising, statistical and purchase-related data may be disclosed only to the relevant service providers — Google AdMob, Google Analytics for Firebase, Expo, the App Store, Google Play and RevenueCat — when needed to provide ads, measurement and fraud prevention, usage statistics, updates, purchases, entitlement validation or restoration. These providers process data under their own terms and privacy policies.</p>
@@ -100,7 +100,7 @@
 <p>The app is not directed to children under 13. The game contains no chat and no public user-generated content, does not require an account, and does not specifically request a child's personal information. Advertising, when enabled, is not targeted at children. Parents and guardians should supervise younger users, use nicknames instead of full names, and avoid entering personal or sensitive information in custom topics.</p>
 <p>If a parent or guardian believes that a child sent personal information to the developer by email, they may contact the developer to request its deletion.</p>
 <h2>Retention and deletion</h2>
-<p>Local game data remains on the device until the user clears it in Settings or uninstalls the app. The word history and the statistics have their own reset buttons, and the "Start over" section in Settings deletes all game data at once — the unfinished game, custom topics and words, presets, history, statistics and the settings themselves — without touching purchases. What survives a reset — premium state, advertising timings, the review counter, the last answer of the consent form and the choice about usage statistics — is removed by uninstalling the app.</p>
+<p>Local game data remains on the device until the user clears it in Settings or uninstalls the app. The word history and the statistics have their own reset buttons, and the "Start over" section in Settings deletes all game data at once — the unfinished game, custom topics and words, presets, history, statistics and the settings themselves — without touching purchases. What survives a reset — premium state, advertising timings, the review counter, the most recent response to the consent form and the choice about usage statistics — is removed by uninstalling the app.</p>
 <p>Usage statistics are tied to a random identifier of the installation, not to a name or an account, so the developer cannot tell which events belong to which person. Switching the statistics off stops the collection, uninstalling the app removes the identifier from the device, and Google deletes the events at the end of the retention period.</p>
 <p>Purchase records may be retained by the stores and by RevenueCat according to their legal obligations and retention policies. A user may write to armdevstack@gmail.com to request deletion of information controlled through RevenueCat; the developer may need an anonymous RevenueCat App User ID or purchase information sufficient to locate the record. Store transaction records that Apple or Google must retain may not be controlled by the developer.</p>
 <h2>Security</h2>
