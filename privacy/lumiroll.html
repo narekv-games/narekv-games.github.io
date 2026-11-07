@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — LumiRoll</title>
+<meta name="description" content="Privacy Policy for LumiRoll (com.armdevstack.lumiroll), a light-and-shadow platformer for all ages: what stays on your device, the update check sent to Expo, and how to delete your data." />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0D0B2E" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#F4F2FF" media="(prefers-color-scheme: light)" />
+<meta name="robots" content="index, follow" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g'%3E%3Cstop offset='0' stop-color='%23FFF6D6'/%3E%3Cstop offset='.55' stop-color='%23FFD45A'/%3E%3Cstop offset='1' stop-color='%23FF9A1F'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='40' fill='url(%23g)'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    --night: #0D0B2E;
+    --sky: #17134A;
+    --card: rgba(255, 255, 255, 0.06);
+    --line: rgba(180, 172, 216, 0.22);
+    --text: #F6F2FF;
+    --muted: #B4ACD8;
+    --glow: #FFD45A;
+    --echo: #5CE1FF;
+    --link: #8BEBFF;
+    --halo: rgba(255, 212, 90, 0.35);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --night: #F4F2FF;
+      --sky: #E6E1FF;
+      --card: #FFFFFF;
+      --line: #D9D3F2;
+      --text: #1B1640;
+      --muted: #5B5486;
+      --glow: #E39A00;
+      --echo: #0B8FB3;
+      --link: #0A6F8C;
+      --halo: rgba(227, 154, 0, 0.25);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: radial-gradient(1200px 600px at 50% -200px, var(--sky), var(--night) 70%) no-repeat, var(--night);
+    color: var(--text);
+    font-family: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:hover { color: var(--echo); }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 16px 72px;
+  }
+
+  .home {
+    display: inline-block;
+    margin: 24px 0 0;
+    font-size: 15px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .home:hover { color: var(--echo); }
+
+  header.hero {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 36px 0 28px;
+  }
+
+  .orb {
+    flex: 0 0 auto;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 38% 35%, #FFF6D6 0, #FFD45A 45%, #FF9A1F 100%);
+    box-shadow: 0 0 0 10px var(--halo), 0 0 48px 12px var(--halo);
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--echo);
+  }
+
+  h1 {
+    margin: 2px 0 0;
+    font-size: clamp(30px, 7vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px 20px;
+    margin: 0 0 28px;
+    padding: 18px 20px;
+    list-style: none;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--card);
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  .facts strong { display: block; color: var(--text); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  .glance {
+    margin: 0 0 28px;
+    padding: 22px 22px 6px;
+    border-radius: 22px;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--glow);
+    background: var(--card);
+  }
+
+  .glance h2 { margin: 0 0 10px; font-size: 22px; }
+
+  nav.contents {
+    margin: 0 0 36px;
+    padding: 18px 20px;
+    border: 1px dashed var(--line);
+    border-radius: 18px;
+  }
+
+  nav.contents h2 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  nav.contents ol {
+    margin: 0;
+    padding-left: 22px;
+    columns: 2 260px;
+    column-gap: 28px;
+    font-size: 15px;
+  }
+
+  nav.contents li { margin: 0 0 6px; break-inside: avoid; }
+
+  section { margin: 0 0 34px; scroll-margin-top: 16px; }
+
+  section h2 {
+    margin: 0 0 12px;
+    font-size: clamp(21px, 4.4vw, 25px);
+    line-height: 1.25;
+  }
+
+  section h2 span { color: var(--echo); margin-right: 6px; }
+
+  p, ul { margin: 0 0 14px; }
+
+  ul { padding-left: 22px; }
+
+  li { margin: 0 0 7px; }
+
+  .rows {
+    margin: 0 0 14px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 6px 18px;
+    padding: 14px 18px;
+    border-top: 1px solid var(--line);
+    background: var(--card);
+    font-size: 15px;
+  }
+
+  .row:first-child { border-top: 0; }
+
+  .row b { display: block; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+  .note { font-size: 15px; color: var(--muted); }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 560px) {
+    header.hero { gap: 16px; padding-top: 28px; }
+    .orb { width: 54px; height: 54px; }
+    .row { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  @media print {
+    body { background: #FFFFFF; color: #000000; font-size: 12pt; }
+    .orb, nav.contents, .home { display: none; }
+    a { color: #000000; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="home" href="/">&#8249; narekv games</a>
+
+  <header class="hero">
+    <div class="orb" aria-hidden="true"></div>
+    <div>
+      <p class="eyebrow">LumiRoll</p>
+      <h1>Privacy Policy</h1>
+    </div>
+  </header>
+
+  <ul class="facts">
+    <li><strong>Effective date</strong>November 7, 2026</li>
+    <li><strong>App</strong>LumiRoll (Android)</li>
+    <li><strong>Package</strong>com.armdevstack.lumiroll</li>
+    <li><strong>Developer</strong>Narek Vardapetyan</li>
+    <li><strong>Contact</strong><a href="mailto:armdevstack@gmail.com">armdevstack@gmail.com</a></li>
+  </ul>
+
+  <div class="glance">
+    <h2>In short</h2>
+    <p>LumiRoll is a single-player platformer for all ages. It has no account, no sign-in and no server of its own. Your progress and settings stay on your phone.</p>
+    <p>The current version shows no advertising, sells nothing and contains no analytics or tracking. The only thing it sends over the internet is a check for a new version of the game, answered by Expo. The game works without an internet connection.</p>
+  </div>
+
+  <nav class="contents" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Data overview</a></li>
+      <li><a href="#device">What stays on your device</a></li>
+      <li><a href="#age">The age question</a></li>
+      <li><a href="#updates">Game updates</a></li>
+      <li><a href="#google-play">Google Play and testing</a></li>
+      <li><a href="#ads">Advertising and purchases</a></li>
+      <li><a href="#permissions">Device permissions</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#sharing">Sharing and sale of data</a></li>
+      <li><a href="#deletion">Keeping and deleting data</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="overview">
+    <h2><span>1.</span>Data overview</h2>
+    <div class="rows">
+      <div class="row">
+        <div><b>Data</b>Progress, records, ghost runs, settings, chosen character and world look, the birth year from the age question, Pro state</div>
+        <div><b>Where it goes</b>Stays on your device. Not sent to the developer or anyone else.</div>
+      </div>
+      <div class="row">
+        <div><b>Data</b>IP address, app version, platform, update channel and technical request details</div>
+        <div><b>Where it goes</b>Sent to Expo Application Services when the game checks for a new version, only to deliver that version.</div>
+      </div>
+      <div class="row">
+        <div><b>Data</b>Your email address and message</div>
+        <div><b>Where it goes</b>Only if you write to the developer, and only to answer you.</div>
+      </div>
+    </div>
+    <p class="note">The developer receives no copy of your progress, your settings or your birth year, and has no way to see them.</p>
+  </section>
+
+  <section id="device">
+    <h2><span>2.</span>What stays on your device</h2>
+    <p>To let you continue where you stopped, LumiRoll saves the following in the app's private storage on your phone:</p>
+    <ul>
+      <li>finished levels, collected shards, best times and scores, hearts, sparks and play statistics such as play time, jumps and wins;</li>
+      <li>ghost runs: the button presses of your best runs, used to replay a ghost ball next to you;</li>
+      <li>settings: language, music and sound volume, hints, timer, screen shake, graphics quality, button layout and look;</li>
+      <li>the character and world look you chose;</li>
+      <li>the birth year from the age question, the parental lock setting and whether Pro is active.</li>
+    </ul>
+    <p>On the first start the game reads your phone's language list on the device to pick the starting language. Nothing about it leaves the phone.</p>
+    <p>If Android backup is switched on for your Google account, Android may include this app storage in your device backup. That backup is made and kept by Google under your account; the developer has no access to it.</p>
+  </section>
+
+  <section id="age">
+    <h2><span>3.</span>The age question</h2>
+    <p>On the first start LumiRoll asks for the year of birth. It does not ask for a name, a date or any other detail. The year is kept only on the device and is used to switch on the parental lock for younger players, so that a grown-up question appears before anything that a parent should decide.</p>
+    <p>The year is never sent anywhere and can be removed by clearing the app's data (see <a href="#deletion">section 10</a>).</p>
+  </section>
+
+  <section id="updates">
+    <h2><span>4.</span>Game updates</h2>
+    <p>When the game starts with an internet connection, it asks Expo Application Services (EAS Update) whether a newer version of the game is available, and downloads it if you choose to install it. To answer, Expo receives the information any web request contains, such as your IP address, together with the app version, platform, update channel and technical details of the request, and may keep request logs for a limited time.</p>
+    <p>The request contains nothing from your progress, settings or birth year. If there is no connection, the check simply does not happen and the game keeps working. Expo processes this information under its own <a href="https://expo.dev/privacy">privacy policy</a>.</p>
+  </section>
+
+  <section id="google-play">
+    <h2><span>5.</span>Google Play and testing</h2>
+    <p>LumiRoll is distributed through Google Play. Installing and updating the app through Google Play is handled by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Google Play may provide the developer with aggregated, anonymous statistics such as install counts and crash and performance reports collected by Android; these do not identify you.</p>
+    <p>If you join a test of LumiRoll, the email address of your Google account is on a testers list that the developer manages in Google Play Console. It is used only to give you access to the test. Feedback you send through Google Play reaches the developer with the details Google Play attaches to it.</p>
+  </section>
+
+  <section id="ads">
+    <h2><span>6.</span>Advertising and purchases</h2>
+    <p>The current version contains no advertising network, no in-app purchases and no payment code. While the game is in testing, everything in LumiRoll Pro is open for everyone at no cost.</p>
+    <p>A later version may offer an optional short video in exchange for a heart and a one-time LumiRoll Pro purchase through Google Play. Before such a version is released, this policy and the game's Data safety information on Google Play will be updated to describe exactly what those services receive. Purchases would always be processed by Google Play; the developer never sees card or payment details.</p>
+  </section>
+
+  <section id="permissions">
+    <h2><span>7.</span>Device permissions</h2>
+    <p>LumiRoll uses only the permissions it needs to run:</p>
+    <ul>
+      <li><strong>Internet</strong>, for the update check described above;</li>
+      <li><strong>Vibration</strong>, for short taps of feedback during play;</li>
+      <li><strong>Audio settings</strong>, to play music and sounds correctly.</li>
+    </ul>
+    <p>The game does not use the camera, microphone, location, contacts, photos or files, and does not request access to them.</p>
+  </section>
+
+  <section id="children">
+    <h2><span>8.</span>Children</h2>
+    <p>LumiRoll is made for players of all ages, including children. It does not collect personal information from anyone, including children: there is no account, chat, sharing with other players, advertising or tracking. The birth year from the age question stays on the device and is used only to protect younger players.</p>
+    <p>If you are a parent or guardian and believe that information about your child has reached the developer, for example in an email, write to <a href="mailto:armdevstack@gmail.com">armdevstack@gmail.com</a> and it will be deleted.</p>
+  </section>
+
+  <section id="sharing">
+    <h2><span>9.</span>Sharing and sale of data</h2>
+    <p>The developer does not sell, rent or trade personal information and does not share it with advertisers or data brokers. Apart from the update check with Expo and distribution through Google Play described above, LumiRoll does not send data to any third party.</p>
+  </section>
+
+  <section id="deletion">
+    <h2><span>10.</span>Keeping and deleting data</h2>
+    <p>Data on the device stays there until you remove it:</p>
+    <ul>
+      <li><strong>Settings → Reset progress</strong> erases levels, records, statistics, hearts, sparks and ghost runs;</li>
+      <li><strong>Android Settings → Apps → LumiRoll → Storage → Clear data</strong>, or uninstalling the app, removes everything the game saved, including the birth year.</li>
+    </ul>
+    <p>Because the developer holds no copy of this data, there is nothing to delete on the developer's side. Emails are kept only as long as needed to answer them and are deleted on request.</p>
+  </section>
+
+  <section id="security">
+    <h2><span>11.</span>Security</h2>
+    <p>Game data is kept in the app's private storage, which other apps cannot read on a normal Android device. Update checks and downloads use encrypted HTTPS connections, and the app accepts updates only from the developer's own Expo project.</p>
+  </section>
+
+  <section id="rights">
+    <h2><span>12.</span>Your rights</h2>
+    <p>Depending on where you live, you may have the right to ask what personal information is held about you, to correct or delete it, and to object to its processing. Since LumiRoll keeps your data only on your device, you can exercise these rights directly with the steps in <a href="#deletion">section 10</a>. For anything the developer may hold, such as an email you sent, write to the contact below. Requests are answered within 30 days.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span>13.</span>Changes to this policy</h2>
+    <p>If the game starts handling data differently, for example when advertising or purchases are added, this page will be updated before that version is released and the effective date above will change.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span>14.</span>Contact</h2>
+    <p>Narek Vardapetyan<br />Email: <a href="mailto:armdevstack@gmail.com">armdevstack@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © 2026 Narek Vardapetyan · <a href="/">narekv games</a>
+  </footer>
+
+</div>
+</body>
+</html>
