@@ -240,7 +240,7 @@
   <div class="glance">
     <h2>In short</h2>
     <p>LumiRoll is a single-player platformer for all ages. It has no account, no sign-in and no server of its own. Your progress and settings stay on your phone.</p>
-    <p>The current version shows no advertising, sells nothing and contains no analytics or tracking. The only thing it sends over the internet is a check for a new version of the game, answered by Expo. The game works without an internet connection.</p>
+    <p>The current version shows no advertising, sells nothing and contains no analytics or tracking. The only thing it sends over the internet is a check for a new version of the game, answered by Expo, which carries a random installation number and technical details but nothing about you or your play. The game works without an internet connection.</p>
   </div>
 
   <nav class="contents" aria-label="Contents">
@@ -271,8 +271,8 @@
         <div><b>Where it goes</b>Stays on your device. Not sent to the developer or anyone else.</div>
       </div>
       <div class="row">
-        <div><b>Data</b>IP address, app version, platform, update channel and technical request details</div>
-        <div><b>Where it goes</b>Sent to Expo Application Services when the game checks for a new version, only to deliver that version.</div>
+        <div><b>Data</b>A random installation ID, IP address, app version, platform, update channel; after a failed start, the IDs of the failed updates and a short error text</div>
+        <div><b>Where it goes</b>Sent to Expo Application Services when the game checks for a new version, to deliver updates and count successful and failed installs.</div>
       </div>
       <div class="row">
         <div><b>Data</b>Your email address and message</div>
@@ -304,7 +304,14 @@
 
   <section id="updates">
     <h2><span>4.</span>Game updates</h2>
-    <p>When the game starts with an internet connection, it asks Expo Application Services (EAS Update) whether a newer version of the game is available, and downloads it if you choose to install it. To answer, Expo receives the information any web request contains, such as your IP address, together with the app version, platform, update channel and technical details of the request, and may keep request logs for a limited time.</p>
+    <p>When the game starts with an internet connection, it asks Expo Application Services (EAS Update) whether a newer version of the game is available, and downloads it if you choose to install it. Each request contains:</p>
+    <ul>
+      <li>a random installation ID, created on the device by the update library; it is not taken from the hardware, the advertising ID or any account, and is replaced when the app is reinstalled;</li>
+      <li>the app version, platform, update channel and the IDs of the installed and running updates;</li>
+      <li>only if an update failed to start: the IDs of up to five failed updates and, once, a short text of the error;</li>
+      <li>your IP address, which any internet request reveals.</li>
+    </ul>
+    <p>Expo uses this, on the developer's behalf, to deliver updates, to count successful and failed installs and to roll updates out gradually. The error text is kept only in raw request logs, which Expo deletes after three days. Expo does not use this information for advertising and does not derive your location from it.</p>
     <p>The request contains nothing from your progress, settings or birth year. If there is no connection, the check simply does not happen and the game keeps working. Expo processes this information under its own <a href="https://expo.dev/privacy">privacy policy</a>.</p>
   </section>
 
@@ -333,13 +340,13 @@
 
   <section id="children">
     <h2><span>8.</span>Children</h2>
-    <p>LumiRoll is made for players of all ages, including children. It does not collect personal information from anyone, including children: there is no account, chat, sharing with other players, advertising or tracking. The birth year from the age question stays on the device and is used only to protect younger players.</p>
+    <p>LumiRoll is made for players of all ages, including children. It does not ask anyone, including children, for personal information: there is no account, chat, sharing with other players, advertising or tracking. The update check uses only a random installation ID, never the advertising ID or hardware identifiers. The birth year from the age question stays on the device and is used only to protect younger players.</p>
     <p>If you are a parent or guardian and believe that information about your child has reached the developer, for example in an email, write to <a href="mailto:armdevstack@gmail.com">armdevstack@gmail.com</a> and it will be deleted.</p>
   </section>
 
   <section id="sharing">
     <h2><span>9.</span>Sharing and sale of data</h2>
-    <p>The developer does not sell, rent or trade personal information and does not share it with advertisers or data brokers. Apart from the update check with Expo and distribution through Google Play described above, LumiRoll does not send data to any third party.</p>
+    <p>The developer does not sell, rent or trade personal information and does not share it with advertisers or data brokers. Expo handles the update check as a service provider on the developer's behalf. Apart from that and distribution through Google Play described above, LumiRoll does not send data to any third party.</p>
   </section>
 
   <section id="deletion">
@@ -349,7 +356,7 @@
       <li><strong>Settings → Reset progress</strong> erases levels, records, statistics, hearts, sparks and ghost runs;</li>
       <li><strong>Android Settings → Apps → LumiRoll → Storage → Clear data</strong>, or uninstalling the app, removes everything the game saved, including the birth year.</li>
     </ul>
-    <p>Because the developer holds no copy of this data, there is nothing to delete on the developer's side. Emails are kept only as long as needed to answer them and are deleted on request.</p>
+    <p>Because the developer holds no copy of this data, there is nothing to delete on the developer's side. The installation ID in Expo's update records is not linked to your name or account; reinstalling the app replaces it. Emails are kept only as long as needed to answer them and are deleted on request.</p>
   </section>
 
   <section id="security">
