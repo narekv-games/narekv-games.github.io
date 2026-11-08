@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Privacy Policy — LumiRoll</title>
-<meta name="description" content="Privacy Policy for LumiRoll (com.armdevstack.lumiroll), a light-and-shadow platformer for all ages: what stays on your device, the update check sent to Expo, and how to delete your data." />
+<meta name="description" content="Privacy Policy for LumiRoll (com.armdevstack.lumiroll), a light-and-shadow platformer for all ages: what stays on your device, ads from Google AdMob, purchases through Google Play, the update check sent to Expo, and how to delete your data." />
 <meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#0D0B2E" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#F4F2FF" media="(prefers-color-scheme: light)" />
@@ -229,7 +229,7 @@
   </header>
 
   <ul class="facts">
-    <li><strong>Effective date</strong>November 7, 2026</li>
+    <li><strong>Effective date</strong>November 8, 2026</li>
     <li><strong>App</strong>LumiRoll (Android)</li>
     <li><strong>Package</strong>com.armdevstack.lumiroll</li>
     <li><strong>Developer</strong>Narek Vardapetyan</li>
@@ -239,7 +239,8 @@
   <div class="glance">
     <h2>In short</h2>
     <p>LumiRoll is a single-player platformer for all ages. It has no account, no sign-in and no server of its own. Your progress and settings stay on your phone.</p>
-    <p>The current version shows no advertising, sells nothing and contains no analytics or tracking. The only thing it sends over the internet is a check for a new version of the game, answered by Expo, which carries a random installation number and technical details but nothing about you or your play. The game works without an internet connection.</p>
+    <p>The game can show ads from Google AdMob: a short video you choose to watch for a reward and, for players aged 13 and over, an occasional full-screen ad at a break between levels. Players under 13 only get child-directed, non-personalised ads. LumiRoll Pro and four characters can be bought once through Google Play; Pro removes all ads. The game also checks Expo for new versions of itself. It has no analytics of its own and works without an internet connection (there are no ads then).</p>
+    <p class="note">This policy covers version 1.0.1 and later. Version 1.0.0, shared only with testers, had no ads and no purchases.</p>
   </div>
 
   <nav class="contents" aria-label="Contents">
@@ -266,8 +267,16 @@
     <h2><span>1.</span>Data overview</h2>
     <div class="rows">
       <div class="row">
-        <div><b>Data</b>Progress, records, ghost runs, settings, chosen character and world look, the birth year from the age question, Pro state</div>
+        <div><b>Data</b>Progress, records, ghost runs, settings, chosen character and world look, the birth year from the age question, the items you bought</div>
         <div><b>Where it goes</b>Stays on your device. Not sent to the developer or anyone else.</div>
+      </div>
+      <div class="row">
+        <div><b>Data</b>IP address, the advertising ID and app set ID where allowed, device and app information, how you interact with ads, ad diagnostics</div>
+        <div><b>Where it goes</b>Sent by the Google Mobile Ads SDK to Google when an ad is loaded or shown, to show and measure ads and to prevent fraud (<a href="#ads">section 6</a>). Nothing is sent for players who own Pro.</div>
+      </div>
+      <div class="row">
+        <div><b>Data</b>Purchases of Pro and characters</div>
+        <div><b>Where it goes</b>Processed by Google Play. The developer receives Google Play's order records, never card or payment details (<a href="#ads">section 6</a>).</div>
       </div>
       <div class="row">
         <div><b>Data</b>A random installation ID, IP address, app version, platform, update channel; after a failed start, the IDs of the failed updates and a short error text</div>
@@ -289,7 +298,7 @@
       <li>ghost runs: the button presses of your best runs, used to replay a ghost ball next to you;</li>
       <li>settings: language, music and sound volume, hints, timer, screen shake, graphics quality, button layout and look;</li>
       <li>the character and world look you chose;</li>
-      <li>the birth year from the age question, the parental lock setting and whether Pro is active.</li>
+      <li>the birth year from the age question, the parental lock setting and which bought items (Pro, characters) your Google account owns.</li>
     </ul>
     <p>On the first start the game reads your phone's language list on the device to pick the starting language. Nothing about it leaves the phone.</p>
     <p>If Android backup is switched on for your Google account, Android may include this app storage in your device backup. That backup is made and kept by Google under your account; the developer has no access to it.</p>
@@ -297,8 +306,12 @@
 
   <section id="age">
     <h2><span>3.</span>The age question</h2>
-    <p>On the first start LumiRoll asks for the year of birth. It does not ask for a name, a date or any other detail. The year is kept only on the device and is used to switch on the parental lock for younger players, so that a grown-up question appears before anything that a parent should decide.</p>
-    <p>The year is never sent anywhere and can be removed by clearing the app's data (see <a href="#deletion">section 10</a>).</p>
+    <p>On the first start LumiRoll asks for the year of birth. It does not ask for a name, a date or any other detail. The year is kept only on the device and is used:</p>
+    <ul>
+      <li>to switch the parental lock on by default for players under 16, so that a grown-up question appears before any purchase;</li>
+      <li>to choose how ads are requested: for a player under 13 every ad request is marked as directed to a child, and for a player under 16 as under the age of consent, so these players only get non-personalised ads; players under 13 never get the full-screen ads between levels.</li>
+    </ul>
+    <p>Only these marks go with an ad request, never the year itself. A player who skips the question is treated as a child. The year can be removed by clearing the app's data (see <a href="#deletion">section 10</a>).</p>
   </section>
 
   <section id="updates">
@@ -322,31 +335,44 @@
 
   <section id="ads">
     <h2><span>6.</span>Advertising and purchases</h2>
-    <p>The current version contains no advertising network, no in-app purchases and no payment code. While the game is in testing, everything in LumiRoll Pro is open for everyone at no cost.</p>
-    <p>A later version may offer an optional short video in exchange for a heart and a one-time LumiRoll Pro purchase through Google Play. Before such a version is released, this policy and the game's Data safety information on Google Play will be updated to describe exactly what those services receive. Purchases would always be processed by Google Play; the developer never sees card or payment details.</p>
+    <p><strong>Ads.</strong> LumiRoll shows ads from Google AdMob, Google's advertising service:</p>
+    <ul>
+      <li>a short video, only when you tap to watch one (for a heart, or to try a character or look for one level), at most 10 a day;</li>
+      <li>for players aged 13 and over, a full-screen ad at a natural break after a finished level, at most one every few minutes, never during play and never in the first levels.</li>
+    </ul>
+    <p>Players who own LumiRoll Pro see no ads, and the game does not start the ad service for them.</p>
+    <p>When an ad is loaded or shown, the Google Mobile Ads SDK in the game sends Google: your IP address (which can show your approximate location), the advertising ID and app set ID where allowed, information about the device and the app (such as model, Android version, language and app version), how you interact with ads (such as views, taps and finished videos) and diagnostics (such as how long an ad took to load). Google uses this to show ads, to measure them, to limit how often the same ad appears and to detect fraud. How Google uses this information is explained in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a> and in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p>Ads are personalised only for adults, and in the European Economic Area, the United Kingdom and Switzerland only after the adult agreed in Google's consent form, shown before the first ad. There, <strong>Settings → Ad privacy choices</strong> in the game opens the form again to change the choice at any time. Everywhere, you can reset or delete your advertising ID in Android's settings (Privacy → Ads). Every ad, for every player, is limited to content rated for families (at most PG; G for players under 13).</p>
+    <p><strong>Purchases.</strong> LumiRoll Pro and the characters Robot, Planet, Dragon and Unicorn can be bought once through Google Play. Google Play processes the payment under its own terms and the Google Privacy Policy; the developer never sees card or payment details. Google Play tells the game on your phone which items your Google account owns, and the game keeps that on the device; <strong>Restore purchase</strong> asks Google Play again, for example after a reinstall. The developer receives Google Play's order records (such as the order number, item, price, country and date), used for accounting, taxes and refunds. When the parental lock is on, a grown-up question appears before Google Play's payment screen.</p>
   </section>
 
   <section id="permissions">
     <h2><span>7.</span>Device permissions</h2>
     <p>LumiRoll uses only the permissions it needs to run:</p>
     <ul>
-      <li><strong>Internet</strong>, for the update check described above;</li>
+      <li><strong>Internet</strong>, for the update check, ads and purchases described above;</li>
       <li><strong>Vibration</strong>, for short taps of feedback during play;</li>
-      <li><strong>Audio settings</strong>, to play music and sounds correctly.</li>
+      <li><strong>Audio settings</strong>, to play music and sounds correctly;</li>
+      <li><strong>Google Play billing</strong>, to open Google Play's payment screen;</li>
+      <li><strong>Advertising ID</strong>, declared by the ad library, so that Google can use the advertising ID for ads where it is allowed (see <a href="#ads">section 6</a>).</li>
     </ul>
-    <p>The update library also declares two technical permissions that Android grants without asking: network state (to see whether a connection exists) and keeping the device awake while an update downloads.</p>
+    <p>The libraries also declare technical permissions that Android grants without asking: network state (to see whether a connection exists), keeping the device awake while an update downloads, and Android's privacy-preserving advertising features (Ad Services).</p>
     <p>The game does not use the camera, microphone, location, contacts, photos or files, and does not request access to them.</p>
   </section>
 
   <section id="children">
     <h2><span>8.</span>Children</h2>
-    <p>LumiRoll is made for players of all ages, including children. It does not ask anyone, including children, for personal information: there is no account, chat, sharing with other players, advertising or tracking. The update check uses only a random installation ID, never the advertising ID or hardware identifiers. The birth year from the age question stays on the device and is used only to protect younger players.</p>
+    <p>LumiRoll is made for players of all ages, including children. It does not ask anyone, including children, for personal information: there is no account, chat or sharing with other players. For a player under 13, or anyone who skipped the age question, every ad request is marked as directed to a child: Google then serves only non-personalised ads rated for all ages, without remarketing, under its rules for children's content. Children never get the full-screen ads between levels, only the videos they choose to watch. Google AdMob takes part in Google Play's Families Self-Certified Ads SDK Program. A grown-up question appears before any purchase. The update check uses only a random installation ID. The birth year from the age question stays on the device.</p>
     <p>If you are a parent or guardian and believe that information about your child has reached the developer, for example in an email, write to <a href="mailto:armdevstack@gmail.com">armdevstack@gmail.com</a> and it will be deleted.</p>
   </section>
 
   <section id="sharing">
     <h2><span>9.</span>Sharing and sale of data</h2>
-    <p>The developer does not sell, rent or trade personal information and does not share it with advertisers or data brokers. Expo handles the update check as a service provider on the developer's behalf. Apart from that and distribution through Google Play described above, LumiRoll does not send data to any third party.</p>
+    <p>The developer does not sell, rent or trade personal information and does not hold any to sell. The game sends data only to:</p>
+    <ul>
+      <li><strong>Google</strong>, for ads (AdMob, <a href="#ads">section 6</a>) and for distribution and purchases (Google Play, sections 5 and 6). When an adult agreed to personalised ads, Google may also use the ad data for its own advertising, which some privacy laws call "sharing"; you can refuse or withdraw this as section 6 explains;</li>
+      <li><strong>Expo</strong>, which handles the update check as a service provider on the developer's behalf (<a href="#updates">section 4</a>).</li>
+    </ul>
   </section>
 
   <section id="deletion">
@@ -354,24 +380,26 @@
     <p>Data on the device stays there until you remove it:</p>
     <ul>
       <li><strong>Settings → Reset progress</strong> erases levels, records, statistics, hearts, sparks and ghost runs;</li>
-      <li><strong>Android Settings → Apps → LumiRoll → Storage → Clear data</strong>, or uninstalling the app, removes everything the game saved, including the birth year.</li>
+      <li><strong>Android Settings → Apps → LumiRoll → Storage → Clear data</strong>, or uninstalling the app, removes everything the game saved, including the birth year;</li>
+      <li>your advertising ID can be reset or deleted in Android's settings (Privacy → Ads); Google keeps ad data under its own retention rules, described in the Google Privacy Policy;</li>
+      <li>purchases belong to your Google account, not to the phone: clearing data does not remove them, and <strong>Restore purchase</strong> brings them back.</li>
     </ul>
-    <p>Because the developer holds no copy of this data, there is nothing to delete on the developer's side. The installation ID in Expo's update records is not linked to your name or account; reinstalling the app replaces it. Emails are kept only as long as needed to answer them and are deleted on request.</p>
+    <p>Because the developer holds no copy of your game data, there is nothing to delete on the developer's side. Google Play's order records are kept as long as accounting and tax law require. The installation ID in Expo's update records is not linked to your name or account; reinstalling the app replaces it. Emails are kept only as long as needed to answer them and are deleted on request.</p>
   </section>
 
   <section id="security">
     <h2><span>11.</span>Security</h2>
-    <p>Game data is kept in the app's private storage, which other apps cannot read on a normal Android device. Update checks and downloads use encrypted HTTPS connections, and the app accepts updates only from the developer's own Expo project.</p>
+    <p>Game data is kept in the app's private storage, which other apps cannot read on a normal Android device. Update checks, ads and purchases use encrypted connections, and the app accepts updates only from the developer's own Expo project.</p>
   </section>
 
   <section id="rights">
     <h2><span>12.</span>Your rights</h2>
-    <p>Depending on where you live, you may have the right to ask what personal information is held about you, to correct or delete it, and to object to its processing. Since LumiRoll keeps your data only on your device, you can exercise these rights directly with the steps in <a href="#deletion">section 10</a>. For anything the developer may hold, such as an email you sent, write to the contact below. Requests are answered within 30 days.</p>
+    <p>Depending on where you live, you may have the right to ask what personal information is held about you, to correct or delete it, and to object to its processing. Since LumiRoll keeps your game data only on your device, you can exercise these rights directly with the steps in <a href="#deletion">section 10</a>; for ad data, use the choices in <a href="#ads">section 6</a> or contact Google. For anything the developer may hold, such as an email you sent, write to the contact below. Requests are answered within 30 days.</p>
   </section>
 
   <section id="changes">
     <h2><span>13.</span>Changes to this policy</h2>
-    <p>If the game starts handling data differently, for example when advertising or purchases are added, this page will be updated before that version is released and the effective date above will change.</p>
+    <p>If the game starts handling data differently, this page will be updated before that version is released and the effective date above will change.</p>
   </section>
 
   <section id="contact">
